@@ -7,18 +7,17 @@
             var apiToken = "b5c538ec7af17587123f35b9f0fc1ba099";
 
             var api = new MobilonApi();
-            
+
             api.connect({
                 data: {
                     apiToken: apiToken,
                     uri: apiHost
                 },
                 success: function () {
-                    console.log('Аутентификация пройдена.');
+                    console.log('auth ready');
                 },
                 error: function (error) {
-                    console.log('Ошибка:');
-                    console.log(error);                    
+                    console.log('error', error);
                 }
             });
 
@@ -26,6 +25,6 @@
     </head>
 
     <body>
-        
+        open console (F12)
     </body>
 </html>

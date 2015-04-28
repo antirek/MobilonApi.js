@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script type="text/javascript" src="http://developer.mobilon.ru/js/mobilon-api-1.1.js"></script>
+        <script>
+
+            var apiHost = "ws://webapi.mobilon.ru";
+            var apiToken = "b5c538ec7af17587123f35b9f0fc1ba099";
+
+            var api = new MobilonApi();
+            
+            api.connect({
+                data: {
+                    apiToken: apiToken,
+                    uri: apiHost
+                },
+                success: function () {
+                    console.log('Аутентификация пройдена.');
+                },
+                error: function (error) {
+                    console.log('Ошибка:');
+                    console.log(error);                    
+                }
+            });
+
+        </script>
+    </head>
+
+    <body>
+        
+    </body>
+</html>
